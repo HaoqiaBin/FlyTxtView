@@ -140,6 +140,24 @@ public class FlyTxtView extends ViewGroup {
 		animation = new TranslateAnimation(Animation.RELATIVE_TO_PARENT, 1, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0);
 		animation.setDuration(500);
 		animationSet.addAnimation(animation);
+		
+		//以下增加旋转效果
+		//淡出淡入效果
+		animation = new AlphaAnimation(0.0f, 1.0f);
+		animation.setDuration(700);
+		animationSet.addAnimation(animation);
+		//移动效果
+		animation = new TranslateAnimation(Animation.RELATIVE_TO_PARENT, 1, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, 0);
+		animation.setDuration(500);
+		animationSet.addAnimation(animation);
+		//旋转效果
+		animation = new RotateAnimation(-90, 360,Animation.RELATIVE_TO_SELF,0f, Animation.RELATIVE_TO_SELF,0.5f);
+		animation.setDuration(800);
+		animationSet.addAnimation(animation);
+		//缩放效果
+		animation = new ScaleAnimation(2.5f, 1.0f, 2.5f, 1.0f,Animation.RELATIVE_TO_SELF, 0.5f,Animation.RELATIVE_TO_SELF, 0.5f);
+		animation.setDuration(500);
+		animationSet.addAnimation(animation);
 	}
 
 }
